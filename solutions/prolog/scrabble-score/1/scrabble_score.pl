@@ -1,0 +1,63 @@
+valor('A', 1).
+valor('B', 3).
+valor('C', 3).
+valor('D', 2).
+valor('E', 1).
+valor('F', 4).
+valor('G', 2).
+valor('H', 4).
+valor('I', 1).
+valor('J', 8).
+valor('K', 5).
+valor('L', 1).
+valor('M', 3).
+valor('N', 1).
+valor('O', 1).
+valor('P', 3).
+valor('Q', 10).
+valor('R', 1).
+valor('S', 1).
+valor('T', 1).
+valor('U', 1).
+valor('V', 4).
+valor('W', 4).
+valor('X', 8).
+valor('Y', 4).
+valor('Z', 10).
+
+valor('a', 1).
+valor('b', 3).
+valor('c', 3).
+valor('d', 2).
+valor('e', 1).
+valor('f', 4).
+valor('g', 2).
+valor('h', 4).
+valor('i', 1).
+valor('j', 8).
+valor('k', 5).
+valor('l', 1).
+valor('m', 3).
+valor('n', 1).
+valor('o', 1).
+valor('p', 3).
+valor('q', 10).
+valor('r', 1).
+valor('s', 1).
+valor('t', 1).
+valor('u', 1).
+valor('v', 4).
+valor('w', 4).
+valor('x', 8).
+valor('y', 4).
+valor('z', 10).
+
+score(Palabra, Score) :-
+    string_chars(Palabra, Lista),
+    score_lista(Lista, Score).
+
+score_lista([], 0).
+score_lista([Cab|Resto], Score):- 
+    valor(Cab, Val),
+    score_lista(Resto, ScoreResto),
+    Score is ScoreResto + Val.
